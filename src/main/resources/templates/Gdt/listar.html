@@ -1,0 +1,21 @@
+<a href="/Gdt/criar">Adicionar Gdt</a>
+<table border="1"> 
+    <tr>
+      <th>#</th>
+      <th>Nome do Grupo</th>
+      <th>Descrição Gdt</th>
+      <th>Email de Contato</th>
+      <th>Responsavel</th>
+      <th>Ações</th>
+    </tr>
+    <tr th:each="tarefa : ${listaGdtsNoFront}">
+      <td th:text="${tarefa.id}"></td>
+      <td th:text="${tarefa.nomeGrupo}"></td>
+      <td th:text="${tarefa.descricaoGdt}"></td>
+      <td th:text="${tarefa.email}"></td>
+      <td th:text="${tarefa.responsavel}"></td>
+      <td>
+        <a th:href="@{Gdt/alterar/{id}(id=${tarefa.id})}">Alterar</a>
+      </td>
+    </tr>
+</table>

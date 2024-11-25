@@ -1,0 +1,18 @@
+<form th:action="@{/evento/alterar/{id}(id=${id})}" method="post">
+    <h3>formulário de Criação de Eventos</h3>
+
+    <label>Nome:</label>
+    <input type="text" name="nome">
+
+        <label>Data:</label>
+        <input type="date" name="data">
+
+        <label>Descrição</label>
+
+            <textarea name="descricao"></textarea>
+
+            <button type="submit">Salvar</button>
+
+            
+        </form>
+        
